@@ -1,17 +1,14 @@
 from conans import ConanFile, CMake, tools
 
-
-class VulkansdkConan(ConanFile):
+class VulkanSDKConan(ConanFile):
     name = "vulkan-sdk"
     version = "1.1.126"
     license = "Apache 2.0"
     author = "Vincent-Olivier Roch <vroch@edu.uwaterloo.ca>"
-    url = "https://github.com/CytopiaTeam/conan-vulkan-sdk"
+    url = "https://github.com/CytopiaTeam/conan-packages"
     description = "LunarG's Vulkan SDK"
     topics = ("vulkan", "gpu", "graphics")
     settings = "os", "build_type", "arch_build"
-    options = {"shared": [True, False]}
-    default_options = {"shared": False}
     generators = "cmake"
 
     def source(self):
@@ -34,6 +31,3 @@ class VulkansdkConan(ConanFile):
     def package(self):
         self.copy("LICENSE.txt", dst="license", src='Vulkan-Headers')
         self.copy(f"include/*", src="Vulkan-Headers")
-
-    def package_info(self):
-        self.cpp_info.libs = ["vulkan"]

@@ -1,6 +1,6 @@
-# conan-vulkan-sdk
+# conan-packages
 
-This conan package provides the Vulkan SDK libraries and header files (including C++ headers)
+This repository contains conan packages that are dependencies of Cytopia.
 
-You can find this package [here](https://bintray.com/beta/#/cytopia/conan-packages/vulkan-sdk:cytopia)
+You can find all packages [here](https://bintray.com/beta/#/cytopia/conan-packages/)
 
