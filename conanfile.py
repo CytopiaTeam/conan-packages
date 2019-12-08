@@ -9,7 +9,7 @@ class VulkansdkConan(ConanFile):
     url = "https://github.com/CytopiaTeam/conan-vulkan-sdk"
     description = "LunarG's Vulkan SDK"
     topics = ("vulkan", "gpu", "graphics")
-    settings = "os", "compiler", "build_type", "arch"
+    settings = "os", "build_type", "arch_build"
     options = {"shared": [True, False]}
     default_options = {"shared": False}
     generators = "cmake"
