@@ -22,3 +22,6 @@ class AngelscriptConan(ConanFile):
     def package(self):
         cmake = CMake(self)
         cmake.install()
+
+    def package_info(self):
+        self.cpp_info.libs = tools.collect_libs(self)
