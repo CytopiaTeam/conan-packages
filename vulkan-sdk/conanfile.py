@@ -31,3 +31,9 @@ class VulkanSDKConan(ConanFile):
     def package(self):
         self.copy("LICENSE.txt", dst="license", src='Vulkan-Headers')
         self.copy(f"include/*", src="Vulkan-Headers")
+    
+    def package_info(self):
+        if self.settings.os == 'Windows':
+            self.cpp_info.libs = ["vulkan-1"]
+        else:
+            self.cpp_info.libs = ["vulkan"]
